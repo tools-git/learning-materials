@@ -389,4 +389,4 @@ button::-moz-focus-inner {
 ```
 
 效果如下：
-![](./images/all.bmp)
+![](./images/all.png)
