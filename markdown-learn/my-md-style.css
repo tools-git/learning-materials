@@ -105,7 +105,7 @@ hr {
 /* Code added by cuiyu 2016-06-03 */
 table { 
     border-collapse: collapse; 
-    border:1px solid #cad9ea; 
+    border:1px solid #FFF; 
     empty-cells:show; 
     /* table-layout:fixed; */ 
     /* margin:0 auto; */ 
@@ -114,7 +114,7 @@ table {
 td, th { 
     background-repeat:repeat-x; 
     height:30px; 
-    border:1px solid #cad9ea; 
+    border:1px solid #FFF; 
     padding: 0px 5px 0px 5px; 
 } 
 
