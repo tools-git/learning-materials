@@ -1,0 +1,491 @@
+<html>
+  <head>
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>i5ting_ztree_toc:learn-01day</title>
+		<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+	  <style>
+		pre {
+		    counter-reset: line-numbering;
+		    border: solid 1px #d9d9d9;
+		    border-radius: 0;
+		    background: #fff;
+		    padding: 0;
+		    line-height: 23px;
+		    margin-bottom: 30px;
+		    white-space: pre;
+		    overflow-x: auto;
+		    word-break: inherit;
+		    word-wrap: inherit;
+		}
+
+		pre a::before {
+		  content: counter(line-numbering);
+		  counter-increment: line-numbering;
+		  padding-right: 1em; /* space after numbers */
+		  width: 25px;
+		  text-align: right;
+		  opacity: 0.7;
+		  display: inline-block;
+		  color: #aaa;
+		  background: #eee;
+		  margin-right: 16px;
+		  padding: 2px 10px;
+		  font-size: 13px;
+		  -webkit-touch-callout: none;
+		  -webkit-user-select: none;
+		  -khtml-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		}
+
+		pre a:first-of-type::before {
+		  padding-top: 10px;
+		}
+
+		pre a:last-of-type::before {
+		  padding-bottom: 10px;
+		}
+
+		pre a:only-of-type::before {
+		  padding: 10px;
+		}
+
+		.highlight { background-color: #ffffcc } /* RIGHT */
+		</style>
+  </head>
+  <body>
+	  <div>
+				<div style='width:25%;'>
+						<ul id="tree" class="ztree" style='width:100%'>
+
+						</ul>
+				</div>
+        <div id='readme' style='width:70%;margin-left:20%;'>
+          	<article class='markdown-body'>
+            	<h1 id="angularjs">AngularJs</h1>
+<h2 id="angularjs-">AngularJs是什么？</h2>
+<ul>
+<li>简称&quot;ng&quot;</li>
+<li>angularjs 是一个前端高级js框架，是一个MVC模式框架，用于创建webApp</li>
+<li>在HTML中使用angular，就像使用模板引擎一样</li>
+<li>通过 指令 扩展HTML，更清晰、更简洁的构建应用程序</li>
+<li>Angular中的双向数据绑定和依赖注入帮你省略了大量的代码</li>
+<li>与服务器交互友好</li>
+</ul>
+<pre><code>AngularJS 诞生于2009年，由 Misko Hevery 等人创建，后为Google所收购。
+是一款优秀的前端JS框架，已经被用于Google的多款产品当中。
+</code></pre><ul>
+<li>其他类似的前端框架： Vue 、 Avalon 、 React 、 BackBone 、 KnockoutJS</li>
+</ul>
+<h2 id="angular-">Angular的核心特性</h2>
+<ul>
+<li><strong>指令</strong>、<strong>MVC</strong>、<strong>模块化</strong>、<strong>双向数据绑定</strong>、<strong>依赖注入</strong></li>
+</ul>
+<h2 id="-">优势</h2>
+<ul>
+<li>减少了DOM操作，让开发人员专注业务逻辑</li>
+<li>通过模块机制，让代码结构更合理，增加可维护性</li>
+<li>通过简单的指令把页面结构和数据结合</li>
+<li>通过自定义指令实现组件化编程</li>
+</ul>
+<h2 id="-">原则</h2>
+<ul>
+<li>不推崇开发人员手动操作DOM, 其底层还是操作DOM</li>
+<li>解放双手，简化了HTML的操作（从DOM中解放出来）</li>
+<li>如果要通过AngularJS操作DOM，就通过 自定义指令 来实现</li>
+</ul>
+<h2 id="-">使用场景</h2>
+<ul>
+<li>AngularJS适用于构建 CRUD （增删改查）应用，一般是：单页应用程序</li>
+<li>如果一个页面中有大量的DOM操作，或者DOM操作太频繁，就不再适合使用angularjs（标准超过1000条指令）</li>
+</ul>
+<h2 id="spa-">SPA-单页应用程序</h2>
+<ul>
+<li>SPA: <code>single page applaction</code></li>
+<li>整个应用程序中只用页面，所有的操作都是在同一个页面中完成</li>
+</ul>
+<h3 id="-">单页应用程序 与 传统多页面应用程序的优势</h3>
+<ol>
+<li>无刷新加载页面，避免了不必要的跳转和重复渲染</li>
+<li>更好的用户体验，让用户在web app感受native app的速度和流畅</li>
+<li>减少了请求体积，节省流量，加快页面响应速度</li>
+<li>可以选择性的保留状态，如音乐网站，切换页面时不会停止播放歌曲（网易云音乐）</li>
+</ol>
+<h3 id="-">劣势</h3>
+<ol>
+<li>因为只有一个页面，需要在同一个页面中管理很多功能，增加应用程序的复杂度。（解决方法：angular框架已经处理好了）</li>
+<li>ajax不利于SEO（搜索引擎优化），但是有其他解决方案（页面静态化，生成加载好的静态页面专门给网络虫看）</li>
+</ol>
+<h2 id="-">主要技术点</h2>
+<ol>
+<li>ajax</li>
+<li>锚点的使用（window.location.href #）</li>
+<li>hashchange事件</li>
+</ol>
+<h2 id="-">实现思路</h2>
+<ul>
+<li>监听锚点值变化的事件，根据不同的锚点值，请求相应的数据</li>
+<li>锚点（#）原本用作页面内部进行跳转，定位并展示相应的内容</li>
+<li>在NG中，锚点被用作请求不同资源的标识，请求数据并展示内容</li>
+</ul>
+<h3 id="-">实例和参考</h3>
+<ul>
+<li><a href="http://baike.baidu.com/item/SPA/17536313#viewPageContent">SPA - 百度百科</a></li>
+<li><a href="https://segmentfault.com/a/1190000000607661">一种SPA（单页面应用）架构</a></li>
+<li><a href="http://music.163.com/">网易云音乐</a></li>
+</ul>
+<h2 id="angularjs-">AngularJS的基础使用</h2>
+<ul>
+<li>AngularJS 是自动执行的，只需要我们告诉它要做什么，在哪个位置去做</li>
+</ul>
+<h3 id="angularjs-1-">angularjs实现文本框值加1的使用步骤</h3>
+<ul>
+<li>1 引入angular的js文件</li>
+<li>2 设置<code>ng-app</code>指令</li>
+<li>3 给文本框添加<code>ng-model</code>指令</li>
+<li>4 给按钮添加<code>ng-click</code>指令</li>
+</ul>
+<h2 id="directive-">directive 指令</h2>
+<ul>
+<li>AngularJS有一套完整的、可扩展的、用来帮助web应用开发的指令集</li>
+<li>指令是DOM元素上的一些标记，让NG给DOM元添加一些特殊的行为</li>
+<li>指令包含：内置指令和自定义指令</li>
+</ul>
+<h3 id="-">指令是什么</h3>
+<ul>
+<li>将前缀为 <code>ng-</code> 的属性称之为指令，其作用是为DOM元素绑定数据、添加事件 等<pre><code class="lang-html">&lt;input type=&quot;text&quot; ng-model=&quot;userName&quot;&gt;
+</code></pre>
+</li>
+<li>指令的值是一个：表达式</li>
+</ul>
+<h3 id="-">指令的类型</h3>
+<ul>
+<li>属性（A）、元素（E）、类（C）、注释（M）</li>
+<li>注意：类和注释这两种指令不常用，也不推荐使用</li>
+</ul>
+<h3 id="-">指令的前缀（知道）</h3>
+<ul>
+<li><code>ng-</code>：                <code>ng-model=&quot;name&quot;</code></li>
+<li><code>data-ng-</code>:            <code>data-ng-model=&quot;name&quot;</code></li>
+<li><code>ng:</code>:                 <code>ng:model=&quot;name&quot;</code></li>
+<li><code>x-ng-</code>：              <code>x-ng-model=&quot;name&quot;</code></li>
+</ul>
+<h3 id="-">常用指令</h3>
+<h4 id="ng-app">ng-app</h4>
+<ul>
+<li>作用：该指令用于启动一个AngularJS应用</li>
+<li>理解：指定AngularJS应用程序管理的边界（范围），只有在ng-app内部的指令才会起作用</li>
+</ul>
+<pre><code>ng-app 指令指定了应用的根元素，通常放置在页面的根元素，也可以是任意的元素
+例如：body或html标签
+
+应用程序运行时，会自动执行边界内部的其他指令。
+标记的范围尽可能小，提高性能
+</code></pre><blockquote>
+<p>注意：可以出现多次 <code>ng-app</code> 指令（不推荐！）
+如果是多个需要手动引导：<code>ng-bootstrap()</code></p>
+</blockquote>
+<h4 id="ng-controller-myctrl-">ng-controller=&quot;myCtrl&quot;</h4>
+<ul>
+<li>作用：指定那个控制器来管理页面的内容，通过$scope给页面中的指令和表达式提供数据，也可以将一些业务逻辑放在控制器中</li>
+</ul>
+<h4 id="ng-model-user-name-">ng-model=&quot;user.name&quot;</h4>
+<ul>
+<li>作用：该指令只能在表单元素中，能够让当前元素与user.name数据双向绑定</li>
+<li>说明：<pre><code>ng-model指令将尝试把属性绑定到当前作用域中。
+如果当前作用域中没有该属性，那么AngluarJS会帮我们隐式创建并且添加到当前作用域中。
+</code></pre></li>
+</ul>
+<h4 id="ng-click">ng-click</h4>
+<ul>
+<li>作用：用来指定DOM元素被点击时执行的事件</li>
+<li>语法：<code>ng-click=&quot;expression&quot;</code></li>
+</ul>
+<pre><code class="lang-html">&lt;button ng-click=&quot;val + 1&quot;&gt;&lt;/button&gt;
+</code></pre>
+<h4 id="ng-init-">ng-init （了解）</h4>
+<ul>
+<li>作用：初始化属性的值</li>
+<li>语法：<code>ng-init=&quot;name=&#39;Jack&#39;&quot;</code></li>
+</ul>
+<h4 id="-">{{}} 插值表达式</h4>
+<h2 id="expression-">expression -表达式</h2>
+<ul>
+<li>介绍：是一些JavaScript的代码片段主要被用在插值绑定或者直接作为指令的属性值</li>
+</ul>
+<pre><code>从JS角度，使用运算符和数据 连接起来的有 结果 的代码就是：表达式
+注意：不带分号
+
+例如：
+可以使用 console.log(); 打印出来， 或者
+    console.log( expression );
+可以用作 赋值运算符 的右值
+    var test = expression;
+</code></pre><pre><code class="lang-html">&lt;p&gt;{{user.name}}&lt;/p&gt;
+&lt;p&gt;{{1 + 8}}&lt;/p&gt;
+&lt;p&gt;{{&quot;hello&quot; + &quot;world&quot;}}&lt;/p&gt;
+
+&lt;div ng-click=&quot;sayHi()&quot;&gt;&lt;/div&gt;
+</code></pre>
+<h2 id="angularjs-">AngularJS的执行过程分析</h2>
+<ul>
+<li>示例代码<pre><code class="lang-html">&lt;body ng-app&gt;
+  &lt;input type=&quot;text&quot; ng-model=&quot;user.name&quot; /&gt;
+  &lt;p&gt;Hello {{user.name}}&lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
+</li>
+</ul>
+<h3 id="-">执行过程说明</h3>
+<ul>
+<li>1 <code>ng-app</code>告诉AngularJS让它来管理 body内部的代码</li>
+<li>2 <code>ng-app</code>指令创建了一个对象，对象中包含了AngularJS的相关内容，例如：数据模型</li>
+<li>3 <code>ng-model</code>指令查询数据模型中有没有 <code>user</code> 对象以及<code>name</code>属性，没有则创建</li>
+<li>4 创建<code>user</code>对象以及<code>name</code>属性，并初始化<code>name</code>值为：空字符串</li>
+<li>5 表达式 <code>{{user.name}}</code> 从数据模型中查找有没有该数据，如果有就取出来，并展示</li>
+<li>6 <code>ng-model</code>和<code>{{}}</code> 中的 user.name 指向的是数据模型中同一个数据</li>
+<li>7 文本框值的变化会导致数据模型的变化，数据模型的变化也会导致表达式的变化</li>
+</ul>
+<h3 id="-js-angular">通过js的方式使用angular</h3>
+<h2 id="angularjs-">AngularJS文档</h2>
+<ul>
+<li><a href="https://angularjs.org">AngularJS官方文档</a></li>
+<li>学会查看官方文档，很重要！！！</li>
+</ul>
+<h2 id="module-">module -模块</h2>
+<ul>
+<li>所有的其他内容，都是基于模块的，有模块才有其他的内容！</li>
+</ul>
+<pre><code>模块是一个容器包含了应用程序的不同组成部分，并且这些内容必须要依附于一个模块
+    例如：controllers, services, filters, directives, configs 等
+
+模块是应用程序的组成单元，例如：登录模块、注册模块、商品列表模块 等，这些模块
+组合在一起构成了一个完整的应用程序。
+</code></pre><h3 id="-">创建模块</h3>
+<ul>
+<li>语法：<code>var app = angular.module(moduleName, []);</code></li>
+<li>作用：创建一个模块，让AngluarJS对整个内容进行模块化管理</li>
+<li>说明：模块也可以被创建多次，但很少这么做</li>
+<li>示例：</li>
+</ul>
+<pre><code class="lang-js">// 第一个参数：模块名称，字符串
+// 第二个参数：数组，用来添加当前模块的依赖项
+var app = angular.module(&quot;firstApp&quot;, [&quot;otherModuleName&quot;]);
+</code></pre>
+<h3 id="-">获取模块</h3>
+<ul>
+<li>语法：<code>var app = angular.module(moduleName);</code></li>
+<li>作用：获取指定的模块</li>
+</ul>
+<h2 id="controller-">controller -控制器</h2>
+<ul>
+<li>需要配合<code>ng-controller</code>指令来使用</li>
+</ul>
+<h3 id="-">创建控制器</h3>
+<ul>
+<li>语法：<code>app.controller(ctrlName, callback);</code></li>
+<li>作用：创建一个控制器，控制器必须出现在某个模块下</li>
+<li>示例：</li>
+</ul>
+<pre><code class="lang-js">app.controller(&quot;DemoController&quot;, function($scope) {
+    // $scope 相当于当前的数据模型
+});
+</code></pre>
+<h3 id="-">控制器的作用</h3>
+<ul>
+<li>1 初始视图中使用的数据，是存储数据的容器</li>
+<li>2 通过$scope对象把数据模型或函数行为暴露给视图</li>
+<li>3 监视模型的变化，做出相应的逻辑处理</li>
+</ul>
+<h3 id="-scope-">$scope的说明</h3>
+<ul>
+<li>1 $scope是控制器和视图之间的桥梁，用于在控制器和视图之间传递数据</li>
+<li>2 推荐：给 $scope 添加数据应该使用对象，而不是作为其属性</li>
+<li>2 在控制器中暴露 数据模型（数据和行为），在视图中通过指令或表达式来使用<ul>
+<li>对比：局部变量</li>
+</ul>
+</li>
+<li>4 注意：<code>$scope</code>这个名称必须这么写！</li>
+<li>5 <code>$scope</code> 是在控制器创建的时候，被注入进去的</li>
+</ul>
+<pre><code>1 ng 在使用的时候，页面中只要有 ng-app 就会创建一个 scope，名字是：$rootScope
+2 $scope 是 HTML（视图）背后的“男人” ----&gt;
+    视图：女人，负责美（展示）
+    $scope：男人，负责提供美的资源（数据）
+3 所有的控制器都继承自 $rootScope 
+4 继承是按照：原型式继承 来实现
+5 对于HTML来说，参照原型式继承：子节点继承自父节点
+</code></pre><h2 id="-">数据绑定方式</h2>
+<h3 id="-">双向数据绑定</h3>
+<ul>
+<li>一般通过 <code>ng-model</code> 指令实现</li>
+<li>概述：<pre><code>数据模型的值发生改变，就会导致页面值的改变；页面值的改变，也会导致数据模型中值的改变，
+这种相互影响的关系就是双向数据绑定。
+</code></pre></li>
+</ul>
+<h3 id="-">单向数据绑定</h3>
+<ul>
+<li>一般通过 <code>{{}}</code> 表达式来实现</li>
+<li>概述：数据模型的值发生改变，导致页面的值发生改变</li>
+</ul>
+<h2 id="mvc-mvvm">MVC 与 MVVM</h2>
+<ul>
+<li>优势：代码分离（视图代码、控制器代码），职责分离，解耦</li>
+<li>目的：解决应用程序展示结构、业务逻辑之间的紧耦合关系，实现模块化和复用</li>
+<li>提高了代码的结构和可维护性，但是不会提高代码执行的效率</li>
+</ul>
+<h3 id="mvc-">MVC介绍</h3>
+<pre><code>MVC（Model–view–controller）是一种软件架构模式，
+把软件系统分为三个基本部分：模型（Model）、视图（View）和控制器（Controller）。
+</code></pre><ul>
+<li>Model 进行数据的存储和数据的处理方法（CRUD）</li>
+<li>View 展示数据<ul>
+<li>在Angluar中，View指的是在页面中被 <code>ng-app</code> 指令包裹的HTML代码</li>
+</ul>
+</li>
+<li>Controller 是应用程序中处理用户交互的部分<ul>
+<li>通常控制器负责从视图读取数据，控制用户输入，并向模型发送数据，是数据和视图的桥梁</li>
+</ul>
+</li>
+</ul>
+<pre><code>例如：移动端和PC端两个View，共享同一个Model
+在MVC设计模式中， Model 响应用户请求并返回响应数据，
+View 负责格式化数据并把它们呈现给用户，业务逻辑和表示层分离，
+同一个 Model 可以被不同的 View 重用，所以大大提高了代码的可重用性。
+</code></pre><h3 id="angularjs-mvc">AngularJS中的MVC</h3>
+<ul>
+<li>Model — scope中的属性</li>
+<li>View — 被 ng-app 指令包裹的HTML内容</li>
+<li>Controller — ng-controller指令指定的控制器函数，处理业务逻辑，并可以为 scope 指定函数和属性</li>
+</ul>
+<h3 id="mvvm">MVVM</h3>
+<ul>
+<li>由 MVC 模式演变出来的！</li>
+</ul>
+<pre><code>M: model 模型
+V: view 视图， ng-app管理的页面
+VM: ViewModel 视图模型，在Angular中就是：$scope
+</code></pre><h4 id="viewmodel">ViewModel</h4>
+<ul>
+<li>1 $scope实际就是MVVM模式中的VM（视图模型）</li>
+<li>2 Angular中大量的使用$scope, 盖过了C（控制器）的概念，所以很多人将其称为MVVM框架</li>
+<li>3 不要深究到底是什么类型（MVC/MVVM），重要的是学会使用。</li>
+<li>4 <code>MVW</code> ===&gt; &quot;Model View Whatever&quot; MV*</li>
+<li>5 MVVM 首先出现在 微软的WPF 中</li>
+</ul>
+<h3 id="-">案例：用户注册</h3>
+<h4 id="localstorage-">localStorage 的基本使用</h4>
+<ul>
+<li><code>getItem(keyName)</code>：读取，参数类型：string</li>
+<li><code>setItem(keyName, keyValue)</code>：设置，参数类型：string</li>
+</ul>
+<h4 id="-">参考</h4>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/localStorage">localStorage - MDN</a></li>
+<li><a href="http://www.cnblogs.com/st-leslie/p/5617130.html">localStorage的基本使用</a></li>
+</ul>
+<h2 id="-watch-">$watch -监听数据</h2>
+<ul>
+<li>语法：<code>$scope.$watch(attrName, callback, flag);</code></li>
+<li>作用：监听$scope中数据模型的变化，无法监视其他的数据（例如，普通变量）</li>
+<li>注意：调用$watch方法时，会立即被调用一次。</li>
+</ul>
+<pre><code class="lang-js">app.controller(&quot;demoController&quot;, function($scope) {
+    $scope.name = &quot;jack&quot;;
+
+    // 参数一：表示监听的$scope中的属性名称，类型为：字符串
+    // 参数二：表示数据变化执行的回调函数，有两个参数分别是：当前值与变化之前的值
+    // 参数三：比较方式，false：表示比较引用；true：表示比较值。默认值为false
+    $scope.$watch(&quot;name&quot;, function(curValue, oldValue) {
+        // 只要被监听的数据发生变化，就会指定该回调函数中的代码！
+
+        // 略过第一次执行
+        if(curValue === oldValue) return;
+    });
+});
+</code></pre>
+<h2 id="-ng-">启动NG的方式</h2>
+<ul>
+<li>1 通过 <code>ng-app</code> 指令启动</li>
+<li>2 手动启动：<code>angular.bootstrap(document, [&#39;MyModule&#39;])</code></li>
+</ul>
+<pre><code class="lang-js">// 等待文档加载完成后，启动 angular
+angular.element(document).ready(function() {
+    angular.bootstrap(document, [&#39;MyModule&#39;]);
+});
+</code></pre>
+<h2 id="-">其他</h2>
+<h3 id="-app">多个app</h3>
+<ul>
+<li>注意：不推荐在同一个页面中创建多个 <code>ng-app</code></li>
+<li>注意：ng只会找到第一个 <code>ng-app</code> 并且启动，如果启动其他的，需要手动启动</li>
+</ul>
+<pre><code class="lang-html">&lt;div ng-app=&quot;FirstApp&quot;&gt;&lt;/div&gt;
+&lt;div ng-app=&quot;SecondApp&quot;&gt;&lt;/div&gt;
+</code></pre>
+<h2 id="-">框架和库的区别</h2>
+<h3 id="library">Library</h3>
+<ul>
+<li>jQuery is a library， Angular is a framework</li>
+<li>jQuery是API的集合，封装DOM操作，提高开发效率</li>
+</ul>
+<pre><code>使用jQuery的思路：
+1 想要获取元素，我调用 $(selector)
+2 元素绑定事件，我调用 .on()
+3 进行什么DOM操作，我调用什么方法完成
+
+总结：你告诉jQuery你要做的操作，jQuery就能帮你做好。
+      **在使用库的过程中，开发人员是 控制者**
+</code></pre><h3 id="framework">Framework</h3>
+<ul>
+<li>框架规定了一种编程方式</li>
+<li>使用框架的时候，由框架控制一切，我们只需要按照规则写代码</li>
+</ul>
+<pre><code>Angular提供了一套完整的解决方案，所有的流程都设定好了
+我们只需要按照流程规则，把我们的代码进行填坑。
+</code></pre><h3 id="-">主要区别</h3>
+<ul>
+<li>控制反转，框架中控制整个流程的是框架</li>
+<li>You call Library, Framework calls you.</li>
+<li>好莱坞原则：Don&#39;t call us, we&#39;ll call you.</li>
+</ul>
+<h2 id="-">其他资料</h2>
+<h3 id="angular-">angular代码风格</h3>
+<ul>
+<li><a href="https://github.com/johnpapa/angular-styleguide">johnpapa/angular-styleguide</a></li>
+</ul>
+<h3 id="-">模块化</h3>
+<ul>
+<li><a href="http://baobao.sohu.com/20151225/n432526267.shtml">乐高</a></li>
+<li><a href="http://baidu.56.com/watch/05196900615515713942.html?page=videoMultiNeed">乐高-机器人</a></li>
+</ul>
+<h3 id="-">参考网站</h3>
+<ul>
+<li><a href="http://cdn.code.baidu.com/">百度CDN</a></li>
+<li><a href="http://tool.oschina.net/">开源中国在线工具</a></li>
+</ul>
+
+          	</article>
+        </div>
+		</div>
+  </body>
+</html>
+<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+<script type="text/javascript" src="toc_conf.js"></script>
+
+<SCRIPT type="text/javascript" >
+<!--
+$(document).ready(function(){
+    var css_conf = eval(markdown_panel_style);
+    $('#readme').css(css_conf)
+    
+    var conf = eval(jquery_ztree_toc_opts);
+		$('#tree').ztree_toc(conf);
+});
+//-->
+</SCRIPT>

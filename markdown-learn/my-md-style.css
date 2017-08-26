@@ -1,6 +1,6 @@
 body{
     font-family: Consolas, 新宋体, Georgia, Palatino, serif;
-    color: #CCCCCC;
+    /* color: #CCCCCC; */
     line-height: 1;
     padding: 30px;
     margin:auto;
@@ -8,7 +8,7 @@ body{
 }
 h1, h2, h3, h4, h5 {
     font-weight: 400;
-    color: red;
+    /* color: red; */
     /* border-bottom: 2px solid #999 !important; */
 }
 h1, h2, h3, h4, h5, p {
@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5, p {
 }
 h1 {
     font-size: 30px;
+    text-align:center;
 }
 h2 {
     font-size: 24px;
@@ -77,7 +78,7 @@ aside {
     width: 390px;
 }
 blockquote {
-    border-left:.5em solid #FFF;
+    /* border-left:.5em solid #FFF; */
     padding: 0 2em;
     margin-left:0;
     /*max-width: 476px;*/
@@ -85,27 +86,27 @@ blockquote {
 blockquote  cite {
     font-size:14px;
     line-height:20px;
-    color:#FFF;
+    /* color:#FFF; */
 }
 blockquote cite:before {
     content: '\2014 \00A0';
 }
 
 blockquote p {  
-    color: #FFF;
+    /* color: #FFF; */
     /* max-width: 460px; */
 }
 hr {
     width: 540px;
     text-align: left;
     margin: 0 auto 0 0;
-    color: #FFF;
+    /* color: #FFF; */
 }
 
 /* Code added by cuiyu 2016-06-03 */
 table { 
     border-collapse: collapse; 
-    border:1px solid #FFF; 
+    /* border:1px solid #FFF;  */
     empty-cells:show; 
     /* table-layout:fixed; */ 
     /* margin:0 auto; */ 
@@ -114,7 +115,7 @@ table {
 td, th { 
     background-repeat:repeat-x; 
     height:30px; 
-    border:1px solid #FFF; 
+    /* border:1px solid #FFF;  */
     padding: 0px 5px 0px 5px; 
 } 
 
@@ -195,7 +196,7 @@ select {
   font-weight: normal;
   line-height: 18px;
   height: 18px;
-  color: #808080;
+  /* color: #808080; */
   border: 1px solid #ccc;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;

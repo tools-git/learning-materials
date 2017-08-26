@@ -1,12 +1,7 @@
 function require(deps,callback){
 	require.callback=callback;
+	require.loadeps=define.loadeps;
 	require.loadeps(deps,callback);
-	console.log(1);
-}
-
-require.loadeps=function (deps,callback){
-	define.loadeps(deps,callback);
-	console.log(2);
 }
 
 function define(deps,callback){
@@ -35,6 +30,7 @@ define.loadeps=function (deps,callback){
 		}
 	})
 }
+
 
 require(["a.js","b.js"],function(objB){
 	console.log(objB);
